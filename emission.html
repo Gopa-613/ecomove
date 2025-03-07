@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoMove</title>
+
+    <link rel="stylesheet" href="emission.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script defer src="script.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+
+   
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="ecomove-high-resolution-logo-transparent.png" alt="EcoMove Logo">
+        </div>
+        <nav>
+            
+                <a href="#home" class="home">Home</a>
+                <a href="#about" class="about">About</a>
+                <a href="#comparison" class="comparison">Comparison</a>
+                <a href="#prediction" class="prediction">Prediction</a>
+            
+        </nav>
+    </header>
+
+<section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Welcome to <img src="crop.png" alt="EcoMove"></h1>
+            <p>We’re excited to welcome you to EcoMove, a space where we explore how different types of vehicles—petrol, diesel, electric (EV), and hybrid—affect our environment. As the number of vehicles on the road increases, so does their impact on air quality and global warming. Here, we compare their emissions over the years and look at how they shape our future. Our goal is to create awareness, share insights, and encourage smarter choices for a cleaner, healthier planet. Join us in this journey towards a more sustainable world!</p>
+        </div>
+        <a href="#about" class="btn">Explore More</a>
+    </section>
+
+
+
+
+
+<section id="about" class="section">
+    <h2>About</h2>
+    <p>This is the about page content...</p>
+
+    
+</section>
+
+<section id="comparison" class="section">
+    <h2>Comparison</h2>
+    <p>Here, we compare emissions and their effects...</p>
+</section>
+
+<section id="prediction" class="section">
+    <h2>Prediction</h2>
+    <p>Predict future emissions trends...</p>
+</section>
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    <script>
+
+document.addEventListener("DOMContentLoaded", function() {
+    gsap.from(".hero-content", { duration: 2, y: 50, opacity: 0, ease: "power2.out" });
+
+    gsap.from(".about-section h2", {
+        scrollTrigger: {
+            trigger: ".about-section",
+            start: "top 80%",
+            toggleActions: "play none none none"
+        },
+        duration: 1.2,
+        y: 50,
+        opacity: 0,
+        ease: "power2.out"
+    });
+
+    gsap.from(".about-section p", {
+        scrollTrigger: {
+            trigger: ".about-section",
+            start: "top 75%",
+            toggleActions: "play none none none"
+        },
+        duration: 1.5,
+        y: 50,
+        opacity: 0,
+        ease: "power2.out",
+        delay: 0.3
+    });
+
+    // Smooth scrolling for navigation links
+    document.querySelectorAll("nav a, .btn").forEach(anchor => {
+        anchor.addEventListener("click", function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute("href").substring(1);
+            document.getElementById(targetId).scrollIntoView({ behavior: "smooth" });
+        });
+    });
+});
+
+
+
+
+
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('nav ul').classList.toggle('active');
+        });
+
+
+
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute("href")).scrollIntoView({
+                behavior: "smooth"
+            });
+        });
+    });
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+</body>
+</html>
