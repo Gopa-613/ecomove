@@ -25,38 +25,44 @@
     <div class="logo">
       <img src="img/logo.png" alt="EcoMove Logo" />
     </div>
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
+    <div class="nav">
+      <a href="#home">Home</a>  
+      <a href="#main">About</a>
       <a href="#comparison">Comparison</a>
       <a href="#prediction">Prediction</a>
-    </nav>
+    </div>
   </header>
-
-  <section id="home" class="hero">
+  <div class="hero" id="home">
     <h1>Welcome to Ecomove</h1>
-    <p>We explore how petrol, diesel, EV, and hybrid vehicles affect our environment. Compare emissions and discover
-      cleaner choices!</p>
+    <p>We're excited to welcome you to EcoMove, a space where we explore how different types of vehicles—petrol, diesel,
+      electric (EV), and hybrid—affect our environment. As the number of vehicles on the road increases, so does their
+      impact
+      on air quality and global warming. Here, we compare their emissions over the years and look at how they shape our
+      future. Our goal is to create awareness, share insights, and encourage smarter choices for a cleaner, healthier
+      planet.
+      Join us in this journey towards a more sustainable world!
+    </p>
     <img src="img/hero-image.png" alt="hero-image">
-    <a href="#about" class="btn">Explore More</a>
-  </section>
+    <button class="btn"><a href="#about" class="buttonLink">Explore More</a></button>
+  </div>
+  <main id="main">
+    <section id="about" class="section">
+      <h2>About</h2>
+      <p>EcoMove is your portal to understanding the environmental impact of various vehicle types. We're here to inform
+        and inspire a shift to greener mobility.</p>
+    </section>
 
-  <section id="about" class="section">
-    <h2>About</h2>
-    <p>EcoMove is your portal to understanding the environmental impact of various vehicle types. We're here to inform
-      and inspire a shift to greener mobility.</p>
-  </section>
+    <section id="comparison" class="section fade-in">
+      <h2>Comparison</h2>
+      <p>Compare emissions and lifecycle impacts across petrol, diesel, EVs, and hybrids.</p>
+    </section>
 
-  <section id="comparison" class="section fade-in">
-    <h2>Comparison</h2>
-    <p>Compare emissions and lifecycle impacts across petrol, diesel, EVs, and hybrids.</p>
-  </section>
-
-  <section id="prediction" class="section fade-in">
-    <h2>Prediction</h2>
-    <p>See trends and predictions on how future mobility may evolve environmentally.</p>
-    <canvas id="emissionChart" width="200" height="100"></canvas>
-  </section>
+    <section id="prediction" class="section fade-in">
+      <h2>Prediction</h2>
+      <p>See trends and predictions on how future mobility may evolve environmentally.</p>
+      <button class="dashboardButton"><a class="buttonLink" href="#home">Go to Dashboard</a></button>
+    </section>
+  </main>
 
 
   <footer class="footer">
