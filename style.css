@@ -134,7 +134,7 @@ section p {
 @media (max-width: 768px) {
   .navbar {
     display: flex;
-    width: 91%;
+    width: 86%;
     flex-direction: column;
   }
 
@@ -197,6 +197,11 @@ section p {
 }
 
 @media (max-width: 425px) {
+  .navbar {
+    display: flex;
+    width: 86%;
+    flex-direction: column;
+  }
   nav {
     display: flex;
     gap: 1rem;
