@@ -25,9 +25,9 @@
     <div class="logo">
       <img src="img/logo.png" alt="EcoMove Logo" />
     </div>
-    <div class="nav">
+    <div class="nav" id="navItems">
       <a href="#home">Home</a>  
-      <a href="#main">About</a>
+      <a href="#about">About</a>
       <a href="#comparison">Comparison</a>
       <a href="#prediction">Prediction</a>
     </div>
@@ -43,20 +43,30 @@
       Join us in this journey towards a more sustainable world!
     </p>
     <img src="img/hero-image.png" alt="hero-image">
-    <button class="btn"><a href="#about" class="buttonLink">Explore More</a></button>
+    <button class="btn" id="exploreButton"><a href="#main" class="buttonLink">Explore More</a></button>
   </div>
-  <main id="main">
-    <section id="about" class="section">
+  
+  <div id="loadingScreen" class="loading-screen">
+    <img id="loadingImage" src="img/hero-image.png" alt="EcoMove Loading Image">
+  </div>
+  
+  <main id="main" style="display: none;">
+    <section id="about" class="section fade-in">
       <h2>About</h2>
-      <p>EcoMove is your portal to understanding the environmental impact of various vehicle types. We're here to inform
-        and inspire a shift to greener mobility.</p>
+      <p>EcoMove is an informative platform that explores how different vehicles—petrol, diesel, electric, and
+        hybrid—impact the
+        environment. Focusing on air pollution and global warming, it presents real-time, data-backed comparisons through
+        clear
+        visuals. Users can explore emissions data, fuel efficiency, and lifecycle impacts via interactive graphs and
+        charts—making complex climate information easy to understand.</p>
     </section>
-
+  
     <section id="comparison" class="section fade-in">
       <h2>Comparison</h2>
       <p>Compare emissions and lifecycle impacts across petrol, diesel, EVs, and hybrids.</p>
+      <button class="dashboardButton"><a class="buttonLink" href="#home">Go to Comparison</a></button>
     </section>
-
+  
     <section id="prediction" class="section fade-in">
       <h2>Prediction</h2>
       <p>See trends and predictions on how future mobility may evolve environmentally.</p>
@@ -68,7 +78,6 @@
   <footer class="footer">
     <p>© 2025 EcoMove. All rights reserved.</p>
   </footer>
-
 </body>
 
 </html>
