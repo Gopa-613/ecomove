@@ -32,7 +32,7 @@ ecomove/
 
 ## Getting Started
 
-1. **[Live Site:](https://gopa-613.github.io/ecomove/)**
+1. **Check live preview here: [Live Site](https://gopa-613.github.io/ecomove/)**
 2. **Open `index.html` in your browser** to explore the main site.
 3. **Navigate** using the navbar to view About, Comparison, and Prediction sections.
 4. **Visit the About page** for detailed project background and external resources.
