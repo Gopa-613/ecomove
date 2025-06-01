@@ -1,20 +1,25 @@
 :root {
-  --color-bg: #f9f9f9; /* Very light grey for a softer background */
-  --color-text-primary: #1d1d1f; /* Dark grey, almost black, for primary text */
-  --color-text-secondary: #666; /* Medium grey for secondary text */
-  --color-accent: #4CAF50; /* A subtle green for accent */
-  --color-accent-hover: #43A047; /* Darker shade for hover */
-  --color-border-light: #e0e0e0; /* Very light border */
-  --color-card-bg: #fff; /* White for section backgrounds to create separation */
-  --font-family: "Bona Nova", serif;
-  --font-weight-regular: 400;
-  --font-weight-bold: 700;
-  --max-width: 1200px; /* Slightly wider max width for a more spacious feel */
+  /* ====== Color Palette ====== */
+  --color-bg: #f9f9f9; /* Background color for body */
+  --color-text-primary: #1d1d1f; /* Main text color */
+  --color-text-secondary: #666; /* Secondary text color */
+  --color-accent: #4CAF50; /* Accent color for buttons/links */
+  --color-accent-hover: #43A047; /* Accent color on hover */
+  --color-border-light: #e0e0e0; /* Light border color */
+  --color-card-bg: #fff; /* Card/section background */
+
+  /* ====== Typography ====== */
+  --font-family: "Bona Nova", serif; /* Base font family */
+  --font-weight-regular: 400; /* Regular font weight */
+  --font-weight-bold: 700; /* Bold font weight */
+
+  /* ====== Layout ====== */
+  --max-width: 1200px; /* Max width for containers */
 }
 
 html {
-  scroll-behavior: smooth;
-  font-size: 16px;
+  scroll-behavior: smooth; /* Smooth scrolling for anchor links */
+  font-size: 16px; /* Base font size for rem units */
 }
 
 body {
@@ -23,21 +28,21 @@ body {
   font-weight: var(--font-weight-regular);
   background-color: var(--color-bg);
   color: var(--color-text-primary);
-  line-height: 1.7; /* Improved line height for readability */
-  -webkit-font-smoothing: antialiased; /* Enhance font rendering for smoother text */
+  line-height: 1.7; /* Improved readability */
+  -webkit-font-smoothing: antialiased; /* Smoother font rendering */
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Navbar */
+/* ====== Navbar Styles ====== */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem 2rem; /* Increased padding for more breathing room */
+  padding: 1.5rem 2rem; /* Spacious padding */
   border-bottom: 1px solid var(--color-border-light);
   position: sticky;
   top: 0;
-  background-color: rgba(249, 249, 249, 0.95); /* Slightly transparent background for a modern feel */
+  background-color: rgba(249, 249, 249, 0.95); /* Modern, slightly transparent */
   z-index: 1000;
   flex-wrap: wrap;
   max-width: var(--max-width);
@@ -45,12 +50,12 @@ body {
 }
 
 .logo img {
-  height: 30px; /* Slightly smaller logo for a cleaner look */
+  height: 30px; /* Consistent logo sizing */
 }
 
 .nav {
-  display: none;
-  gap: 2rem; /* Increased gap for more spacing */
+  display: none; /* Hidden by default, shown via JS or media queries */
+  gap: 2rem; /* Spacing between nav items */
 }
 
 .nav a {
@@ -58,28 +63,29 @@ body {
   color: var(--color-text-primary);
   font-weight: var(--font-weight-regular);
   font-size: 1rem;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease; /* Smooth color transition */
 }
 
 .nav a:hover {
-  color: var(--color-accent);
+  color: var(--color-accent); /* Highlight on hover */
 }
 
-/* Hero Section */
+/* ====== Hero Section ====== */
 .hero {
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 1.5rem;
-  padding: 8rem 2rem 6rem; /* Increased vertical padding, reduced horizontal */
-  border-bottom: none; /* Removed bottom border for a cleaner transition */
-  max-width: 900px; /* Narrower max width for better text flow */
+  padding: 8rem 2rem 6rem; /* Vertical emphasis */
+  border-bottom: none;
+  max-width: 900px; /* Restrict width for readability */
   margin: 0 auto;
-  text-align: center; /* Center align content in the hero */
+  text-align: center;
 }
 
 .hero img {
-  display: none;
+  display: none; /* Hide hero image by default */
+  /* Uncomment and adjust for hero image positioning */
   /* position: absolute;
   right: 0;
   height: 20vh;
@@ -87,65 +93,66 @@ body {
 }
 
 .hero h1 {
-  font-size: clamp(2.5rem, 6vw, 3.5rem); /* Larger, more impactful heading */
+  font-size: clamp(2.5rem, 6vw, 3.5rem); /* Responsive heading */
   font-weight: var(--font-weight-bold);
   margin: 0 0 0.5rem 0;
   line-height: 1.1;
 }
 
 .hero p {
-  font-size: clamp(1.1rem, 2.2vw, 1.3rem);
+  font-size: clamp(1.1rem, 2.2vw, 1.3rem); /* Responsive paragraph */
   color: var(--color-text-secondary);
   max-width: 800px;
   margin: 0 auto 1.5rem auto;
 }
 
-/* Buttons */
+/* ====== Button Styles ====== */
 .btn,
 .dashboardButton {
-  display: inline-block; /* To control width based on content */
-  padding: 0.8rem 1.8rem; /* Slightly more padding */
+  display: inline-block;
+  padding: 0.8rem 1.8rem; /* Comfortable click area */
   font-size: 1rem;
   font-family: var(--font-family);
   background-color: var(--color-accent);
   color: #fff;
   border: none;
-  border-radius: 0.6rem; /* Slightly more rounded */
+  border-radius: 0.6rem; /* Rounded corners */
   text-decoration: none;
   transition: background-color 0.3s ease, transform 0.2s ease-in-out;
   cursor: pointer;
   margin-top: 1.5rem;
 }
 
-
 .btn:hover {
   background-color: var(--color-accent-hover);
   color: white;
-  transform: translateY(-2px); /* Subtle lift on hover */
+  transform: translateY(-2px); /* Subtle lift effect */
 }
-.buttonLink{
+
+.buttonLink {
   text-decoration: none;
   color: white;
 }
-.buttonLink:hover{
-  font-style: bold;
+
+.buttonLink:hover {
+  font-style: bold; /* (Note: should use font-weight for boldness) */
 }
 
-/* Main Content */
+/* ====== Main Content Layout ====== */
 main {
   padding: 4rem 2rem;
   max-width: var(--max-width);
   margin: 0 auto;
 }
 
-/* Section */
+/* ====== Section Styles ====== */
 section {
   background-color: var(--color-card-bg);
-  padding: 3rem 2rem; /* Increased padding */
-  border-radius: 12px; /* More rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.03); /* Softer shadow */
+  padding: 3rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.03); /* Soft shadow for depth */
   border: 1px solid var(--color-border-light);
-  margin-bottom: 2rem; /* Increased margin for more visual separation */
+  margin-bottom: 2rem;
   text-align: center;
 }
 
@@ -163,7 +170,7 @@ section p {
   margin: 0 auto 1.5rem auto;
 }
 
-/* Specific styling for Comparison and Prediction sections */
+/* ====== Special Section Layouts ====== */
 #comparison,
 #prediction {
   display: flex;
@@ -177,7 +184,7 @@ section p {
   margin-bottom: 2rem;
 }
 
-/* Footer */
+/* ====== Footer Styles ====== */
 .footer {
   text-align: center;
   padding: 2.5rem 1rem;
@@ -185,21 +192,21 @@ section p {
   font-size: 0.9rem;
   border-top: 1px solid var(--color-border-light);
   max-width: var(--max-width);
-  margin: 2rem auto 0; /* Add some top margin to separate from main content */
+  margin: 2rem auto 0;
 }
 
-/* Loading Screen Styles */
+/* ====== Loading Screen Styles ====== */
 .loading-screen {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #e9f5db; /* Match background */
+  background-color: #e9f5db; /* Match app background */
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1001; /* Higher than everything else */
+  z-index: 1001; /* Above all other content */
 }
 
 .loading-screen img {
@@ -209,7 +216,7 @@ section p {
   outline: 2px dashed var(--color-accent-hover);
   outline-offset: 2px;
   border-radius: 176px;
-  animation: waveJump 0.5s ease-in-out infinite alternate;
+  animation: waveJump 0.5s ease-in-out infinite alternate; /* Animated effect */
 }
 
 @keyframes waveJump {
@@ -217,17 +224,16 @@ section p {
     transform: translateY(0);
   }
   100% {
-    transform: translateY(-20px); /* Adjust jump height */
+    transform: translateY(-20px); /* Jump animation */
   }
 }
 
-/* Initially hide the loading screen */
+/* Hide loading screen by default */
 .loading-screen {
   display: none;
 }
 
-
-/* Responsive Layout */
+/* ====== Responsive Layout ====== */
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column;
