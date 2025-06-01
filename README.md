@@ -4,7 +4,7 @@ EcoMove is an informative web platform that explores and compares the environmen
 
 ## Features
 
-- **Vehicle Emissions Comparison:** Visualize and compare emissions (NOx, CO₂) from petrol, diesel, and electric vehicles.
+- **Vehicle Emissions Comparison:** Visualize and compare emissions (NOx, CO₂ and compute NOx AQI) from petrol, diesel, and electric vehicles.
 - **Interactive Dashboards:** Access external dashboards for in-depth comparison and prediction analytics.
 - **Educational Content:** Learn about the lifecycle impacts of different vehicle types, including the environmental footprint of EV batteries.
 - **Responsive Design:** Optimized for desktop and mobile devices.
